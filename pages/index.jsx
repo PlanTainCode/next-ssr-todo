@@ -106,10 +106,20 @@ export default function Home(props) {
 
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get(url);
-  return {
-    props: {
-      tasks: data.data
+  try {
+    const { data } = await axios.get(url);
+    return {
+      props: {
+        tasks: data.data
+      }
+    }
+  } catch {
+    return {
+      props: {
+        tasks: null
+      }
     }
   }
+  
+  
 }
