@@ -1,0 +1,128 @@
+.page {
+  width: 100%;
+  background: #fff4e2;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 15px 80px;
+}
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    font-size: 30px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+  }
+
+  span {
+    display: block;
+    content: '';
+    width: 5px;
+    height: 30px;
+    background: #000000;
+    &:before {
+      display: block;
+      content: '';
+      width: 10px;
+      height: 5px;
+      background: #000000;
+      margin-left: -15px;
+      margin-top: 0px;
+    }
+    &:after {
+      display: block;
+      content: '';
+      width: 10px;
+      height: 5px;
+      background: #000000;
+      margin-left: -15px;
+      margin-top:20px;
+    }
+  }
+}
+
+.main {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.formPaper {
+  border-radius: 30px !important;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 30px 0px 0px 30px;
+    border: 0.1px solid #000000;
+    color: #000000;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  button {
+    border-radius: 0px 30px 30px 0px;
+    border: 0.1px solid #000000;
+    background: #fff4e2;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.taskBlock {
+  border-radius: 30px !important;
+  padding: 30px 20px;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  align-items: center;
+  h2 {
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #000000;
+
+}
+
+.titleTask {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.lineThrow {
+  text-decoration: line-through;
+}
