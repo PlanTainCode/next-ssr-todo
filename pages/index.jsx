@@ -9,7 +9,7 @@ import { EditOutlined as Edit, DeleteOutlineOutlined as Delete, PlaylistAddCheck
 // const url = process.env.SERVER_URL;
 // const url = "http://localhost:3000/api/task";
 
-const url = `${process.env.API_URL}/api/task`;
+const url = `${process.env.BASE_URL}/task`;
 
 export default function Home(props) {
   const [tasks, setTasks] = React.useState(props.tasks);
