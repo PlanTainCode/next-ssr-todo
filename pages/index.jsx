@@ -7,7 +7,9 @@ import styles from '../styles/Home.module.scss'
 import { EditOutlined as Edit, DeleteOutlineOutlined as Delete, PlaylistAddCheck as Icon  } from '@mui/icons-material';
 
 // const url = process.env.SERVER_URL;
-const url = "http://localhost:3000/api/task";
+// const url = "http://localhost:3000/api/task";
+
+const url = `${process.env.API_URL}/api/task`;
 
 export default function Home(props) {
   const [tasks, setTasks] = React.useState(props.tasks);
@@ -36,7 +38,7 @@ export default function Home(props) {
         setTask({task: ""});
         console.log(data.message);
       } else {
-        const {data} = await axios.post(url, task);
+        const {data} = await axios.post(`${url}`, task);
         setTasks((prev) => [...prev, data.data]);
         setTask({task: ""});
         console.log(data.message)
@@ -116,7 +118,7 @@ export const getServerSideProps = async () => {
   } catch {
     return {
       props: {
-        tasks: null
+        tasks: []
       }
     }
   }
