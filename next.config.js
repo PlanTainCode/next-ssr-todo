@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPwa = require("next-pwa")
+module.exports = withPwa({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
   reactStrictMode: true,
   env: {
     BASE_URL: process.env.BASE_URL,
@@ -19,7 +25,6 @@ const nextConfig = {
     ]
   }
 
+})
 
-}
-
-module.exports = nextConfig
+// module.exports = nextConfig

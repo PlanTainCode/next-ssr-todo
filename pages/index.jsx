@@ -75,6 +75,12 @@ export default function Home(props) {
 
   return (
     <div className={styles.page}>
+      <Head>
+        <title>Next.js TO-DO</title>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#fff4e2" />
+      </Head>
       <header className={styles.header}>
         <Typography variant='h1'><Icon /> PlanTain To-Do</Typography>
         <span></span>
